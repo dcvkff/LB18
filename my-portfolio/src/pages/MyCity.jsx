@@ -37,14 +37,12 @@ const MyCity = () => {
   if (loading) return <p>Завантаження...</p>;
   if (error) return <p style={{ color: 'red' }}>{error}</p>;
 
-  // Отримання даних для відображення
   const currentWeather = weather?.hourly;
   
   return (
     <div>
       <h1>Моє місто: Київ</h1>
-      
-      {/* Виведення основних погодних параметрів */}
+    
       <p>Температура: {currentWeather?.temperature_2m[0]}°C</p>
       <p>Відчувається як: {currentWeather?.apparent_temperature[0]}°C</p>
       <p>Вологість: {currentWeather?.relative_humidity_2m[0]}%</p>
